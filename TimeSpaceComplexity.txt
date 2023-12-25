@@ -1,0 +1,72 @@
+Time and Space Complexity!
+Preferred : Less Time and Less Space!
+
+Time Complexity: Relation between input size and running time.
+Scanner -> take input n -> time depends on input n
+This relationship can be linear, quadratic, cubic, logarthmic, exponential, sqrt etc. 
+
+
+Best Case (Omega) ; Avg Case (Theta) ; Worst Case (Big Oh)
+
+Example 1:
+
+input = n 
+
+for (int i=i; i<=n; i++)
+{
+    System.out.println("In for loop");
+}
+
+Time complexity = O(n)
+Space complexity = sc, i, n => constant
+
+
+Example 2:
+
+input = n 
+
+for (int i=i; i<=n; i++)  -> n times
+{
+    for(int j=1; j<=n; j++) -> n times
+    {
+    System.out.println("In for loop");
+    }
+}
+
+Time complexity = O(n^2)
+Space complexity = sc, i, n => constant
+
+
+Example 3:
+
+input = m, n
+
+for (int i=i; i<=m; i++)  -> m times
+{
+    for(int j=1; j<=n; j++) -> n times
+    {
+    System.out.println("In for loop");
+    }
+}
+
+Time complexity = O(m * n)
+Space complexity = sc, i, n, m => constant
+
+
+Example 4:
+
+input = m, n
+
+for (int i=i; i<=m; i++)  -> m times
+{
+   System.out.println("In for loop-1");
+}
+for(int j=1; j<=n; j++) -> n times
+{
+    System.out.println("In for loop-2");
+}
+
+Time complexity = O(m + n)  //depends on whatever is larger (m or n)
+Space complexity = sc, i, n, m => constant
+
+In case of arrays -> space complexity depends on size of n.
