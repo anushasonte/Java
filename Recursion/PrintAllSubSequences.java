@@ -13,6 +13,20 @@ Last level of the tree -> leaves - represent all subsequences
 if input = abc, length (n) = 3, each a,b,c has two choices whether to appear or not = 2*2*2 = 8 = 2 pow n
 */
 
+/* Problem: 
+If input = aaa,
+output = 
+aaa
+aaa
+aa
+aa
+a
+aa
+a
+a
+Solution: PrintAllUniqueSubSequences.java
+*/
+
 public class PrintAllSubSequences {
 
     public static void printsubsequence(String input, String newString, int index){
