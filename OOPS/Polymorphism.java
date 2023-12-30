@@ -1,5 +1,5 @@
 package OOPS;
-import OOPS.AccessModifiers;
+import OOPS.Account;
 
 /*
 Two types:
@@ -45,7 +45,7 @@ public class Polymorphism {
         s1.printInfo(s1.name); //Prints from method-2
         s1.printInfo(s1.age); //Prints from method-3
 
-        Account a1 = new Account(); //From AccessModifiers.java
+        OOPS.Account a1 = new Account(); //From AccessModifiers.java
         a1.name = "Customer-1";
        // a1.accountNumber = 123456; private
         a1.email = "customer1@gmail.com"; 
