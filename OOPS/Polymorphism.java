@@ -1,5 +1,4 @@
 package OOPS;
-import OOPS.Account;
 
 /*
 Two types:
