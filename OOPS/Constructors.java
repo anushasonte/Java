@@ -53,6 +53,8 @@ public class Constructors {
         s3.printName();;
         s3.printAge();
 
+        //There are no destructors in java, objects are automatically garbage collected.
+
     }
     
 }
