@@ -1,23 +1,26 @@
-package Collections;
+package Collections.Queue;
 
-//while removing, instead of pushing elements to beginning which took O(n) time, we will now simply increase the front to make it O(1)
-// rear = (rear+1) % size;
+//Front: a[0]
+//rear : a[last element index]
+//Initially, front, rear = -1 -> empty queue
+//before inserting element -> check if queue is full -> O(1)
+//before removing element -> check if empty -> O(n)
+//peek() : element present at front end -> O(1)
 
-public class CircularQueueUsingArray {
+public class QueueUsingArray{
 
-    static class CircularQueue {
+    static class Queue {
         static int[] arr;
         static int size;
         static int rear = -1; //queue is empty!
-        static int front = -1;
 
-        public CircularQueue(int n){
+        public Queue(int n){
             this.size = n;
             arr = new int[n];
         }
 
         public static boolean isEmpty(){
-            if(rear == -1 && front == -1){
+            if(rear == -1){
                 return true;
             }
             else{
@@ -26,7 +29,7 @@ public class CircularQueueUsingArray {
         }
 
         public static boolean isFull(){
-            if((rear+1) % size == front){
+            if(rear == size-1){
                 return true;
             }
             else{
@@ -39,11 +42,10 @@ public class CircularQueueUsingArray {
                 System.out.println("Queue is full, cannot insert!");
                 return;
             }
-            if(front == -1){ //adding first element
-                 front = 0;
+            else{
+                rear++;
+                arr[rear] = data;
             }
-            rear = (rear+1) % size;
-            arr[rear] = data;
 
         }
 
@@ -53,14 +55,12 @@ public class CircularQueueUsingArray {
                 return -1;
             }
             else{
-                int top = arr[front];
-                if(rear == front){
-                    rear = front = -1;
+                int front = arr[0];
+                for(int i =0;i < rear; i++){ //moving elements to the front
+                    arr[i] = arr[i+1];
                 }
-                else {
-                    front = (front+1) % size;
-                }
-                return top;
+                rear --;
+                return front;
             }
 
         }
@@ -71,8 +71,8 @@ public class CircularQueueUsingArray {
                 return -1;
             }
             else{
-                int top = arr[front];
-                return top;
+                int front = arr[0];
+                return front;
             }
             
         }
@@ -80,7 +80,7 @@ public class CircularQueueUsingArray {
 
     public static void main(String[] args) {
 
-        CircularQueue queue = new CircularQueue(5);
+        Queue queue = new Queue(5);
 
         System.out.println("Adding elememts to queue..");
         queue.enqueue(1);
@@ -90,7 +90,7 @@ public class CircularQueueUsingArray {
         queue.enqueue(3);
 
         queue.enqueue(4);
-
+        
         queue.enqueue(5);
 
         System.out.println("Removing first element..");
@@ -99,17 +99,11 @@ public class CircularQueueUsingArray {
         System.out.println("Removing second element..");
         System.out.println(queue.dequeue());
 
-        System.out.println("Adding two more elememts to queue..");
-        queue.enqueue(6);
-
-        queue.enqueue(7);
-
         while(!queue.isEmpty()) {
             System.out.println(queue.dequeue());
         }
- 
 
-        
+
         
     }
     

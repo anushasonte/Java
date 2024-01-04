@@ -1,4 +1,4 @@
-package Collections;
+package Collections.Stack;
 
 //STACK - LIFO data structure!
 //PUSH, POP, PEEK OPERATIONS
