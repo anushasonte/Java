@@ -30,7 +30,7 @@ To remove:
 
 public class QueueUsingTwoStacks {
 
-     static class QueueUsingStack {
+     static class QueueUsingStackCostlyEnqueue {
 
         static Stack<Integer> s1 = new Stack<>();
         static Stack<Integer> s2 = new Stack<>();
@@ -78,7 +78,7 @@ public class QueueUsingTwoStacks {
 
     public static void main(String[] args) {
 
-        QueueUsingStack queue = new QueueUsingStack();
+        QueueUsingStackCostlyEnqueue queue = new QueueUsingStackCostlyEnqueue();
 
         System.out.println("Adding elememts to queue..");
         queue.add(1);
