@@ -60,7 +60,7 @@ public class StackImplUsingLinkedlist {
             return top;
         }
 
-        public static int peep(){
+        public static int peek(){
             int top = -1;
             if(!isStackEmpty()){
                 top = head.data;
@@ -80,7 +80,7 @@ public class StackImplUsingLinkedlist {
         Stack.push(5);
 
         System.out.println("Retrieving top most element..");
-        System.out.println(Stack.peep());
+        System.out.println(Stack.peek());
 
         System.out.println("Popping elements from Stack..");
         while(!Stack.isStackEmpty()){
@@ -88,7 +88,7 @@ public class StackImplUsingLinkedlist {
         }
 
         System.out.println("Retrieving top most element..");
-        System.out.println(Stack.peep());
+        System.out.println(Stack.peek());
 
     }
 

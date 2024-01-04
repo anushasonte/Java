@@ -29,7 +29,7 @@ public class StackImplUsingArraylist {
             return data;
         }
 
-        public static int peep(){
+        public static int peek(){
             int data = -1;
             if(!isEmpty()){
                 data = list.get(list.size()-1);
@@ -49,7 +49,7 @@ public class StackImplUsingArraylist {
         Stack.push(5);
 
         System.out.println("Retrieving top most element..");
-        System.out.println(Stack.peep());
+        System.out.println(Stack.peek());
 
         System.out.println("Popping elements from Stack..");
         while(!Stack.isEmpty()){
@@ -57,7 +57,7 @@ public class StackImplUsingArraylist {
         }
 
         System.out.println("Retrieving top most element..");
-        System.out.println(Stack.peep());
+        System.out.println(Stack.peek());
         
     }
     
