@@ -1,6 +1,7 @@
 package Collections;
 
 import java.util.ArrayDeque;
+import java.util.LinkedList;
 import java.util.Queue;
 
 //Queue : FIFO data structure!
@@ -12,7 +13,10 @@ public class QueueBasic {
 
     public static void main(String[] args) {
 
+        //Queue is an interface and not class, it is implemented by two classes ArrayDeque (or) Linkedlist
         Queue<Integer> queue = new ArrayDeque<>();
+
+        //Queue<Integer> queue1 = new LinkedList<>();
 
         System.out.println("Adding elememts to queue..");
         queue.add(1);
