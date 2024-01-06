@@ -1,8 +1,8 @@
 import java.util.Scanner;
 public class FibUsingGoldenratio {
 
-    public static int findFibonacci(int n){
-        int result = (int) ((Math.pow(((1+Math.sqrt(5))/2),n)-Math.pow(((1-Math.sqrt(5))/2),n))/Math.sqrt(5));
+    public static long findFibonacci(int n){
+        long result = (long) ((Math.pow(((1+Math.sqrt(5))/2),n)-Math.pow(((1-Math.sqrt(5))/2),n))/Math.sqrt(5));
         return result;
 
     }
