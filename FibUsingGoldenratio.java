@@ -15,6 +15,8 @@ public class FibUsingGoldenratio {
         for(int i=0; i< num; i++){
             System.out.print(findFibonacci(i) + " ");
         }
+
+        sc.close();
         
     }
     
