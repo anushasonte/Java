@@ -29,6 +29,7 @@ public class Runtimepoly {
         //Run time polymorphism: Ref variable of parent class is used to create child class
         Shape s = new Circle();
         s.draw();  //Determination of the method call is based on the obj being referenced. Call is resolved at runtime.
+        //this is also called dynamic method dispatch
         
     }
     
